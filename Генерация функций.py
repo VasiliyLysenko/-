@@ -12,8 +12,8 @@ func = function_factory("multiplication")
 print(func(2, 3))
 func = function_factory("division")
 print(func(2, 1))
-# func = function_factory("division") # Здесь будет выдаваться ошибка
-# print(func(2, 0))
+func = function_factory("division") # Здесь будет выдаваться ошибка
+print(func(2, 0))
 
 # Создание лямбда функции
 multiplication = lambda x, y: x ** y
