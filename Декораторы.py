@@ -10,7 +10,7 @@ def is_prime(sum_three):
         else:
             for i in range(2, int(result ** 0.5 + 1), 3):
                 if result % i == 0:
-                    print("Не простое")
+                    print("Составное")
                 else:
                     print("Простое")
 
