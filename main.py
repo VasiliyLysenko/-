@@ -1,39 +1,20 @@
-import multiprocessing
+# "1st program".
+print(9 ** 0.5 * 5)
 
+# "2nd program".
+if 9.99 > 9.98 and 1000 != 1000.1:
+    print(True)
+else:
+    print(False)
 
-class WarehouseManager:
-    data = {}
+# "3rd program".
+a = 2 * 2 + 2
+print(a)
+b = 2 * (2 + 2)
+print(b)
+print(a == b)
 
-    def process_request(self, request):
-        prod_name = request[0]
-        action = request[1]
-        quantity = request[2]
-        if prod_name in self.data:
-            if action == 'receipt':
-                self.data[prod_name] += quantity
-
-            if action == 'shipment':
-                if self.data[prod_name] < quantity:
-                    print('Товара на складе недостаточно для отгрузки')
-                else:
-                    self.data[prod_name] -= quantity
-        else:
-            self.data[prod_name] = quantity
-        return self.data
-    def run(self, requests):
-        with multiprocessing.Pool(processes=4) as pool:
-            self.data = pool.map(self.process_request, requests)
-
-
-manager = WarehouseManager()
-
-req = [
-        ("product1", "receipt", 100),
-        ("product2", "receipt", 150),
-        ("product1", "shipment", 30),
-        ("product3", "receipt", 200),
-        ("product2", "shipment", 50)
-    ]
-if __name__ == '__main__':
-    manager.run(req)
-    print(manager.data)
+# "4th program".
+str = '123.456'
+float_ = float(str)
+print(int(float_ * 10) % 10)
