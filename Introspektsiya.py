@@ -1,4 +1,5 @@
 import inspect
+import sys
 def introspection_info(obj):
 
     obj_type = type(obj).__name__ # Тип объекта
