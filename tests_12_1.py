@@ -14,7 +14,7 @@ class RunnerTest(unittest.TestCase):
         self.assertEqual(runner2.distance, 100)
 
     def test_challenge(self):
-        runner3 = runner.Runner('Test Runner2')
+        runner3 = runner.Runner('Test Runner3')
         for _ in range(10):
             runner3.walk()
         for _ in range(10):
