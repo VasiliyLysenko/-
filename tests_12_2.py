@@ -18,23 +18,24 @@ class TournamentTest(unittest.TestCase):
         print("\nРезультаты всех тестов:")
         for name, time in cls.all_results.items():
             print(f"{name}: {time}")
+            
     def test_race_usein_nik(self):
         tournament = runner_2.Tournament(90, self.runner1, self.runner3)
         all_results = tournament.start()
         last_runner = max(all_results.keys())
-        self.assertTrue(all_results[last_runner].name == "Усэйн")
+        self.assertTrue(all_results[last_runner].name == "Ник")
 
     def test_race_andrey_nik(self):
         tournament = runner_2.Tournament(90, self.runner2, self.runner3)
         all_results = tournament.start()
         last_runner = max(all_results.keys())
-        self.assertTrue(all_results[last_runner].name == "Андрей")
+        self.assertTrue(all_results[last_runner].name == "Ник")
 
     def test_race_andrey_usein_nik(self):
         tournament = runner_2.Tournament(90, self.runner2, self.runner1, self.runner3)
         all_results = tournament.start()
         last_runner = max(all_results.keys())
-        self.assertTrue(all_results[last_runner].name == "Усэйн")
+        self.assertTrue(all_results[last_runner].name == "Ник")
 
 if __name__ == "__main__":
     unittest.main()
