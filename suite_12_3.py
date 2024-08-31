@@ -3,21 +3,21 @@ import runner2 as r2
 import unittest
 class RunnerTest(unittest.TestCase):
     is_frozen = False
-    @unittest.skipIf(is_frozen, '')
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_walk(self):
         runner1 = r1.Runner('Test Runner1')
         for _ in range(10):
             runner1.walk()
         self.assertEqual(runner1.distance, 50)
 
-    @unittest.skipIf(is_frozen, '')
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_run(self):
         runner2 = r1.Runner('Test Runner2')
         for _ in range(10):
             runner2.run()
         self.assertEqual(runner2.distance, 100)
 
-    @unittest.skipIf(is_frozen, '')
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_challenge(self):
         runner3 = r1.Runner('Test Runner2')
         for _ in range(10):
