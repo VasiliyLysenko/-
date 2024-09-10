@@ -45,10 +45,6 @@ async def send_calories(message, state):
     await message.answer(f"Ваша норма калорий {result} ккал")
     await state.finish()
 
-# @dp.message_handler()
-# async def buttons_in_a_row(message):
-#     await message.answer("Делаем кнопки в один ряд", reply_markup=in_a_row)
-
 @dp.message_handler(commands=["start"])
 async def start(message):
     await message.answer("Привет! Я бот помогающий твоему здоровью.", reply_markup=rkm)
