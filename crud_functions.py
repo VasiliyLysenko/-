@@ -1,45 +1,63 @@
+
 import sqlite3
 
-def initiate_db():
-    connection = sqlite3.connect('products.dp')
-    cursor = connection.cursor()
 
+def initiate_db():
+    connection = sqlite3.connect('products_db.db')
+    cursor = connection.cursor()
     cursor.execute('''
-    CREATE TABLE IF NOT EXISTS products(
-    id INTEGER PRIMARY KEY,
+    CREATE TABLE IF NOT EXISTS Products(
+    id INT PRIMARY KEY,
     title TEXT NOT NULL,
     description TEXT,
-    price TEXT NOT NULL
+    price INT
+    )
+    ''')
+
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS Users(
+    id INT PRIMARY KEY,
+    username TEXT NOT NULL,
+    email TEXT NOT NULL,
+    age INT NOT NULL,
+    balance INT NOT NULL
     )
     ''')
 
     connection.commit()
     connection.close()
 
-def check_and_populate_products():
-    connection = sqlite3.connect('products.dp')
-    cursor = connection.cursor()
-
-    cursor.execute('SELECT COUNT(*) FROM Products')
-    count = cursor.fetchone()[0]
-
-    if count == 0:
-        for i in range(1, 5):
-            cursor.execute(
-                'INSERT INTO Products(title, description, price) VALUES (?, ?, ?)',
-                (f'Продукт {i}', f'Описание {i}', f'{i*100}')
-            )
-    else:
-        pass
-
-    connection.commit()
-    connection.close()
 
 def get_all_products():
-    connection = sqlite3.connect('products.dp')
+    connection = sqlite3.connect('products_db.db')
     cursor = connection.cursor()
-    cursor.execute('SELECT * FROM Products')
+    cursor.execute('''
+    SELECT * FROM Products
+    ''')
     products = cursor.fetchall()
     connection.commit()
     connection.close()
     return products
+
+
+def add_user(username, email, age):
+    connection = sqlite3.connect('products_db.db')
+    cursor = connection.cursor()
+    cursor.execute('''
+    INSERT INTO Users (username, email, age, balance) VALUES (?, ?, ?, ?)
+    ''', (username, email, age, 1000))
+    connection.commit()
+    connection.close()
+
+
+def is_included(username):
+    connection = sqlite3.connect('products_db.db')
+    cursor = connection.cursor()
+    user = cursor.execute("SELECT username FROM Users WHERE username = ?",
+                          (username,)).fetchone()
+    connection.commit()
+    connection.close()
+    if not user:
+        return False
+    else:
+        return True
