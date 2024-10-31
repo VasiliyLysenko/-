@@ -6,3 +6,5 @@ def func_template_(request):
     return render(request, 'func_template.html')
 
 
+class class_teamplate_(TemplateView):
+    template_name = 'class_template.html'
