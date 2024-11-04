@@ -1,5 +1,5 @@
 Была вызвана shell панель для вызова QuerySet запросов командой  -> python manage.py shell
-Для того, чтобы таблица Buyer была активна для заполнения, была вызвана команда -> task1.models import Buyer
+Для того, чтобы таблица Buyer была активна для заполнения, была вызвана команда -> from task1.models import Buyer
 После вызова, я начал заполнять таблицу Buyer командами: Buyer.objects.create(name='Ilya', balance=1500.05, age=24), команда была написана для 3 объектов
                                                          Buyer.objects.create(name='Terminator2000', balance=42.15, age=52)
                                                          Buyer.objects.create(name='Ubuvator423', balance=0.5, age=16) - по условию age должно быть меньше 18
