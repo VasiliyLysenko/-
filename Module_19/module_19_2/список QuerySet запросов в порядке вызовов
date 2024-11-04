@@ -12,5 +12,5 @@
                            free_buyer = Buyer.objects.get(id=3)
 
 И связал полями buyer для записей Game командами: Game.objects.get(id=1).buyer.set((first_buyer, second_buyer))
-                                                  Game.objects.get(id=2).buyer.set((first_buyer, second_buyer, free_buyer))
+                                                  Game.objects.get(id=2).buyer.set((second_buyer, free_buyer))
                                                   Game.objects.get(id=3).buyer.set((first_buyer, second_buyer))
