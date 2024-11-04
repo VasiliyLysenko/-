@@ -3,7 +3,7 @@
 После вызова, я начал заполнять таблицу Buyer командами: Buyer.objects.create(name='Ilya', balance=1500.05, age=24), команда была написана для 3 объектов
                                                          Buyer.objects.create(name='Terminator2000', balance=42.15, age=52)
                                                          Buyer.objects.create(name='Ubuvator423', balance=0.5, age=16) - по условию age должно быть меньше 18
-Далее была вызвана команда для Game -> task1.models import Game
+Далее была вызвана команда для Game -> from task1.models import Game
 Следующая команда похожа, только уже подставляем Game и добавляем больше полей для внесения данных: Game.objects.create(title='Cyberpunk 2077', cost=31, size=46.2, description='Game of the year', age_limited=1)
                                                                                                     Game.objects.create(title='Mario', cost=5, size=0.5, description='Old Game', age_limited=0) - по условию без ограничения возвраста
                                                                                                     Game.objects.create(title='Hitman', cost=12, size=36.6, description='Who kills Vark?', age_limited=1) 
