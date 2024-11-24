@@ -34,9 +34,3 @@ Plotly:
 ![Интерактивный график рассеяния](https://github.com/VasiliyLysenko/-/blob/main/Дипломная%20работа/Отображение%20работы%20кода/Plotly/Интерактивный%20график%20рассеяния.jpg)
 ![Интерактивный парный график](https://github.com/VasiliyLysenko/-/blob/main/Дипломная%20работа/Отображение%20работы%20кода/Plotly/Интерактивный%20парный%20график.jpg)
 ![Круговая диаграмма](https://github.com/VasiliyLysenko/-/blob/main/Дипломная%20работа/Отображение%20работы%20кода/Plotly/Круговая%20диаграмма.jpg)
-
-Ссылки на изображения для каждой библиотеки:
-  Matplotlib - https://github.com/VasiliyLysenko/-/tree/main/Дипломная%20работа/Отображение%20работы%20кода/Matplotlib
-  Seaborn - https://github.com/VasiliyLysenko/-/tree/main/Дипломная%20работа/Отображение%20работы%20кода/Seaborn
-  Plotly - https://github.com/VasiliyLysenko/-/tree/main/Дипломная%20работа/Отображение%20работы%20кода/Plotly
-
