@@ -13,3 +13,5 @@
   Matplotlib - https://github.com/VasiliyLysenko/-/tree/main/Дипломная%20работа/Отображение%20работы%20кода/Matplotlib
   Seaborn - https://github.com/VasiliyLysenko/-/tree/main/Дипломная%20работа/Отображение%20работы%20кода/Seaborn
   Plotly - https://github.com/VasiliyLysenko/-/tree/main/Дипломная%20работа/Отображение%20работы%20кода/Plotly
+
+  https://github.com/VasiliyLysenko/-/blob/main/Дипломная%20работа/Отображение%20работы%20кода/Matplotlib/Гистограмма%20распределения%20длины%20лепестка.jpg
