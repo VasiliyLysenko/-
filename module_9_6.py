@@ -1,13 +1,13 @@
-import itertools
+def all_subsequences(text):
+    length = len(text)
+    for i in range(1 << length):  # 2^length
+        subseq = []
+        for j in range(length):
+            # Проверяем, установлен ли j-й бит
+            if (i & (1 << j)):
+                subseq.append(text[j])
+        yield ''.join(subseq)
 
-
-def all_variants(text):
-    for j in range(1, len(text) + 1):
-        comb = list(itertools.combinations(text, j))
-        for k in comb:
-            yield ''.join(k)
-
-
-a = all_variants("abc")
+a = all_subsequences("abc")
 for i in a:
     print(i)
